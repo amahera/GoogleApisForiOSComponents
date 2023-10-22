@@ -1,6 +1,6 @@
 // Firebase artifacts available to be built. These artifacts generate NuGets.
 Artifact FIREBASE_AB_TESTING_ARTIFACT              = new Artifact ("Firebase.ABTesting",              "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "ABTesting");
-Artifact FIREBASE_AD_MOB_ARTIFACT                  = new Artifact ("Firebase.AdMob",                  "8.13.0.3", "11.0", ComponentGroup.Firebase, csprojName: "AdMob");
+//Artifact FIREBASE_AD_MOB_ARTIFACT                  = new Artifact ("Firebase.AdMob",                  "8.13.0.3", "11.0", ComponentGroup.Firebase, csprojName: "AdMob");
 Artifact FIREBASE_ANALYTICS_ARTIFACT               = new Artifact ("Firebase.Analytics",              "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "Analytics");
 Artifact FIREBASE_AUTH_ARTIFACT                    = new Artifact ("Firebase.Auth",                   "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "Auth");
 Artifact FIREBASE_CLOUD_FIRESTORE_ARTIFACT         = new Artifact ("Firebase.CloudFirestore",         "8.10.0.3", "11.0", ComponentGroup.Firebase, csprojName: "CloudFirestore");
@@ -45,7 +45,7 @@ Artifact MLKIT_OBJECT_DETECTION                  = new Artifact ("MLKit.ObjectDe
 
 var ARTIFACTS = new Dictionary<string, Artifact> {
 	{ "Firebase.ABTesting",              FIREBASE_AB_TESTING_ARTIFACT },
-	{ "Firebase.AdMob",                  FIREBASE_AD_MOB_ARTIFACT },
+	//{ "Firebase.AdMob",                  FIREBASE_AD_MOB_ARTIFACT },
 	{ "Firebase.Analytics",              FIREBASE_ANALYTICS_ARTIFACT },
 	{ "Firebase.Auth",                   FIREBASE_AUTH_ARTIFACT },
 	{ "Firebase.CloudFirestore",         FIREBASE_CLOUD_FIRESTORE_ARTIFACT },
@@ -90,7 +90,7 @@ var ARTIFACTS = new Dictionary<string, Artifact> {
 void SetArtifactsDependencies ()
 {
 	FIREBASE_AB_TESTING_ARTIFACT.Dependencies              = new [] { FIREBASE_CORE_ARTIFACT };
-	FIREBASE_AD_MOB_ARTIFACT.Dependencies                  = new [] { FIREBASE_CORE_ARTIFACT, GOOGLE_MOBILE_ADS_ARTIFACT };
+	//FIREBASE_AD_MOB_ARTIFACT.Dependencies                  = new [] { FIREBASE_CORE_ARTIFACT, GOOGLE_MOBILE_ADS_ARTIFACT };
 	FIREBASE_ANALYTICS_ARTIFACT.Dependencies               = new [] { FIREBASE_CORE_ARTIFACT, FIREBASE_INSTALLATIONS_ARTIFACT };
 	FIREBASE_AUTH_ARTIFACT.Dependencies                    = new [] { FIREBASE_CORE_ARTIFACT, /* Needed for sample */ GOOGLE_SIGN_IN_ARTIFACT };
 	FIREBASE_CLOUD_FIRESTORE_ARTIFACT.Dependencies         = new [] { FIREBASE_CORE_ARTIFACT, /* Needed for sample */ FIREBASE_AUTH_ARTIFACT };
@@ -138,9 +138,9 @@ void SetArtifactsPodSpecs ()
 	FIREBASE_AB_TESTING_ARTIFACT.PodSpecs = new [] { 
 		PodSpec.Create ("Firebase", "8.10.0", frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseABTesting", targetName: "FirebaseABTesting", subSpecs: new [] { "ABTesting" })
 	};
-	FIREBASE_AD_MOB_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("Firebase", "8.10.0", subSpecs: new [] { "AdMob" })
-	};
+// 	FIREBASE_AD_MOB_ARTIFACT.PodSpecs = new [] {
+// 		PodSpec.Create ("Firebase", "8.10.0", subSpecs: new [] { "AdMob" })
+// 	};
 	FIREBASE_ANALYTICS_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("Firebase", "8.10.0", subSpecs: new [] { "Analytics" })
 	};
@@ -373,7 +373,7 @@ void SetArtifactsSamples ()
 {
 	// Firebase components
 	FIREBASE_AB_TESTING_ARTIFACT.Samples              = null;
-	FIREBASE_AD_MOB_ARTIFACT.Samples                  = new [] { "AdMobSample" };
+	//FIREBASE_AD_MOB_ARTIFACT.Samples                  = new [] { "AdMobSample" };
 	FIREBASE_ANALYTICS_ARTIFACT.Samples               = new [] { "AnalyticsSample" };
 	FIREBASE_AUTH_ARTIFACT.Samples                    = new [] { "AuthSample" };
 	FIREBASE_CLOUD_FIRESTORE_ARTIFACT.Samples         = new [] { "CloudFirestoreSample" };
