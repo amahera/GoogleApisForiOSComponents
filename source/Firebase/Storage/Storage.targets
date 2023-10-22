@@ -1,10 +1,14 @@
 <Project>
   <PropertyGroup>
     <_FirebaseStorageId>FirebaseStorage</_FirebaseStorageId>
+    <_FirebaseStorageInternalId>FirebaseStorageInternal</_FirebaseStorageInternalId>
   </PropertyGroup>
   <ItemGroup Condition="('$(OutputType)' != 'Library' OR '$(IsAppExtension)' == 'True') AND ('$(TargetFrameworks)' == '' AND '$(TargetFramework)' == '')">
     <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Storage.resources\FirebaseStorage.xcframework">
       <_Id>$(_FirebaseStorageId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Storage.resources\FirebaseStorageInternal.xcframework">
+	  <_Id>$(_FirebaseStorageInternalId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <Target Name="_ResolveNativeReferencesForFirebaseStorage" 
@@ -15,9 +19,12 @@
         <Kind>Framework</Kind>
         <SmartLink>True</SmartLink>
         <ForceLoad>True</ForceLoad>
-        <LinkerFlags>-ObjC</LinkerFlags>
-        <Frameworks>MobileCoreServices</Frameworks>
       </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseStorageInternalId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
       <NativeReference Include="@(_NativeReference)" />
     </ItemGroup>
   </Target>

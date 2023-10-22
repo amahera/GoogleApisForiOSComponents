@@ -10,7 +10,7 @@
     <RootNamespace>Firebase.Core</RootNamespace>
     <AssemblyName>Firebase.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>8.15.0.1</FileVersion>
+    <FileVersion>9.0.0.1</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -26,7 +26,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2007321</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>8.15.0.1</PackageVersion>
+    <PackageVersion>9.0.0.1</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\AssemblyInfo.cs" />
@@ -73,6 +73,24 @@
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\leveldb.xcframework">
       <_Id>$(_leveldbId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseAppCheckInterop.xcframework">
+      <_Id>$(_FirebaseAppCheckInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseAuthInterop.xcframework">
+      <_Id>$(_FirebaseAuthInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseCoreExtension.xcframework">
+      <_Id>$(_FirebaseCoreExtensionId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseCoreInternal.xcframework">
+      <_Id>$(_FirebaseCoreInternalId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseMessagingInterop.xcframework">
+      <_Id>$(_FirebaseMessagingInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseSharedSwift.xcframework">
+      <_Id>$(_FirebaseSharedSwiftId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->

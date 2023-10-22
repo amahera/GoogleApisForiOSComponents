@@ -1,8 +1,8 @@
 ﻿<Project>
   <PropertyGroup>
     <_FirebaseCoreAssemblyName>Firebase.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</_FirebaseCoreAssemblyName>
-    <_GoogleAppMeasurementItemsFolder>GAppM-8.15.0</_GoogleAppMeasurementItemsFolder>
-    <_GoogleAppMeasurementSDKBaseFolder>$(XamarinBuildDownloadDir)$(_GoogleAppMeasurementItemsFolder)\GoogleAppMeasurement-8.15.0\Frameworks\</_GoogleAppMeasurementSDKBaseFolder>
+    <_GoogleAppMeasurementItemsFolder>GAppM-9.0.0</_GoogleAppMeasurementItemsFolder>
+    <_GoogleAppMeasurementSDKBaseFolder>$(XamarinBuildDownloadDir)$(_GoogleAppMeasurementItemsFolder)\GoogleAppMeasurement-9.0.0\Frameworks\</_GoogleAppMeasurementSDKBaseFolder>
   </PropertyGroup>
   <ItemGroup Condition="('$(OutputType)'!='Library' OR '$(IsAppExtension)'=='True')">
     <XamarinBuildDownload Include="$(_GoogleAppMeasurementItemsFolder)">
@@ -42,6 +42,12 @@
     <_GoogleUtilitiesId>GoogleUtilities</_GoogleUtilitiesId>
     <_nanopbId>nanopb</_nanopbId>
     <_leveldbId>leveldb</_leveldbId>
+    <_FirebaseAppCheckInteropId>FirebaseAppCheckInterop</_FirebaseAppCheckInteropId>
+    <_FirebaseAuthInteropId>FirebaseAuthInterop</_FirebaseAuthInteropId>
+    <_FirebaseCoreExtensionId>FirebaseCoreExtension</_FirebaseCoreExtensionId>
+    <_FirebaseCoreInternalId>FirebaseCoreInternal</_FirebaseCoreInternalId>
+    <_FirebaseMessagingInteropId>FirebaseMessagingInterop</_FirebaseMessagingInteropId>
+    <_FirebaseSharedSwiftId>FirebaseSharedSwift</_FirebaseSharedSwiftId>
   </PropertyGroup>
   <ItemGroup Condition="('$(OutputType)' != 'Library' OR '$(IsAppExtension)' == 'True') AND ('$(TargetFrameworks)' == '' AND '$(TargetFramework)' == '')">
     <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseCore.xcframework">
@@ -67,6 +73,24 @@
     </_NativeReference>
     <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\leveldb.xcframework">
       <_Id>$(_leveldbId)</_Id>
+    </_NativeReference>
+  	<_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseAppCheckInterop.xcframework">
+	  <_Id>$(_FirebaseAppCheckInteropId)</_Id>
+  	</_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseAuthInterop.xcframework">
+	  <_Id>$(_FirebaseAuthInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseCoreExtension.xcframework">
+	  <_Id>$(_FirebaseCoreExtensionId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseCoreInternal.xcframework">
+	  <_Id>$(_FirebaseCoreInternalId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseMessagingInterop.xcframework">
+	  <_Id>$(_FirebaseMessagingInteropId)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="$(MSBuildThisFileDirectory)..\lib\xamarinios10\Firebase.Core.resources\FirebaseSharedSwift.xcframework">
+	  <_Id>$(_FirebaseSharedSwiftId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <Target Name="_ResolveNativeReferencesForFirebaseCore" 
@@ -117,6 +141,36 @@
         <SmartLink>True</SmartLink>
         <ForceLoad>True</ForceLoad>
       </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseAppCheckInteropId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseAuthInteropId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseCoreExtensionId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseCoreInternalId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseMessagingInteropId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
+	  <_NativeReference Update="@(_NativeReference)" Condition="'%(_NativeReference._Id)' == '$(_FirebaseSharedSwiftId)'">
+		<Kind>Framework</Kind>
+		<SmartLink>True</SmartLink>
+		<ForceLoad>True</ForceLoad>
+	  </_NativeReference>
       <NativeReference Include="@(_NativeReference)" />
     </ItemGroup>
   </Target>
