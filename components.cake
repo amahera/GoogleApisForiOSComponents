@@ -163,13 +163,13 @@ void SetArtifactsPodSpecs ()
 	FIREBASE_CORE_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("Firebase",                  "8.10.0",    frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseCore", targetName: "FirebaseCore", subSpecs: new [] { "CoreOnly" }),		
 		PodSpec.Create ("FirebaseCoreDiagnostics",   "8.10.0",    frameworkSource: FrameworkSource.Pods),
-		PodSpec.Create ("GTMSessionFetcher",         "1.7.0",     frameworkSource: FrameworkSource.Pods, subSpecs: new [] { "Full" }),
+		PodSpec.Create ("GTMSessionFetcher",         "1.7.2",     frameworkSource: FrameworkSource.Pods, subSpecs: new [] { "Full" }),
 		PodSpec.Create ("GoogleAppMeasurement",      "8.10.0"),
 		PodSpec.Create ("GoogleDataTransport",       "9.1.2",     frameworkSource: FrameworkSource.Pods),
-		PodSpec.Create ("PromisesObjC",              "2.0.0",     frameworkSource: FrameworkSource.Pods, frameworkName: "FBLPromises", targetName: "PromisesObjC"),
-		PodSpec.Create ("GoogleUtilities",           "7.6.0",     frameworkSource: FrameworkSource.Pods, subSpecs: new [] { "AppDelegateSwizzler", "Environment", "Logger", "ISASwizzler", "MethodSwizzler", "Network", "NSData+zlib", "Reachability", "UserDefaults", }),
+		PodSpec.Create ("PromisesObjC",              "2.3.1",     frameworkSource: FrameworkSource.Pods, frameworkName: "FBLPromises", targetName: "PromisesObjC"),
+		PodSpec.Create ("GoogleUtilities",           "7.11.5",     frameworkSource: FrameworkSource.Pods, subSpecs: new [] { "AppDelegateSwizzler", "Environment", "Logger", "ISASwizzler", "MethodSwizzler", "Network", "NSData+zlib", "Reachability", "UserDefaults", }),
 		PodSpec.Create ("nanopb",                    "2.30908.0", frameworkSource: FrameworkSource.Pods),
-		PodSpec.Create ("leveldb-library",           "1.22.1",    frameworkSource: FrameworkSource.Pods, frameworkName: "leveldb"),
+		PodSpec.Create ("leveldb-library",           "1.22.2",    frameworkSource: FrameworkSource.Pods, frameworkName: "leveldb"),
 	};
 	FIREBASE_CRASHLYTICS_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("Firebase", "8.10.0", frameworkSource: FrameworkSource.Pods, frameworkName: "FirebaseCrashlytics", targetName: "FirebaseCrashlytics", subSpecs: new [] { "Crashlytics" })
