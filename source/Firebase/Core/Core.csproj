@@ -59,32 +59,20 @@
     <_NativeReference Include="..\..\..\externals\GTMSessionFetcher.xcframework">
       <_Id>$(_GTMSessionFetcherId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleAPIClientForREST.xcframework">
-      <_Id>$(_GoogleAPIClientForRESTId)</_Id>
-    </_NativeReference>
     <_NativeReference Include="..\..\..\externals\GoogleDataTransport.xcframework">
       <_Id>$(_GoogleDataTransportId)</_Id>
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\FBLPromises.xcframework">
       <_Id>$(_FBLPromisesId)</_Id>
     </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleToolboxForMac.xcframework">
-      <_Id>$(_GoogleToolboxForMacId)</_Id>
-    </_NativeReference>
     <_NativeReference Include="..\..\..\externals\GoogleUtilities.xcframework">
       <_Id>$(_GoogleUtilitiesId)</_Id>
-    </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\GoogleUtilitiesComponents.xcframework">
-      <_Id>$(_GoogleUtilitiesComponentsId)</_Id>
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\nanopb.xcframework">
       <_Id>$(_nanopbId)</_Id>
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\leveldb.xcframework">
       <_Id>$(_leveldbId)</_Id>
-    </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\Protobuf.xcframework">
-      <_Id>$(_ProtobufId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
