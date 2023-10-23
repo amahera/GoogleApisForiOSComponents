@@ -6,11 +6,11 @@
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>true</NoBindingEmbedding>
-    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
     <RootNamespace>Firebase.Storage</RootNamespace>
     <AssemblyName>Firebase.Storage</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>9.6.0.1</FileVersion>
+    <FileVersion>10.0.0.4</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -26,7 +26,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865545</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>9.6.0.1</PackageVersion>
+    <PackageVersion>10.0.0.4</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -49,9 +49,6 @@
   <ItemGroup>
     <_NativeReference Include="..\..\..\externals\FirebaseStorage.xcframework">
       <_Id>$(_FirebaseStorageId)</_Id>
-    </_NativeReference>
-    <_NativeReference Include="..\..\..\externals\FirebaseStorageInternal.xcframework">
-      <_Id>$(_FirebaseStorageInternalId)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->

@@ -17,10 +17,6 @@ namespace Firebase.Storage
 	[BaseType (typeof (NSObject), Name = "FIRStorage")]
 	interface Storage
 	{
-		// extern NSString *const _Nonnull FIRStorageErrorDomain;
-		[Field ("FIRStorageErrorDomain", "__Internal")]
-		NSString ErrorDomain { get; }
-
 		// +(instancetype _Nonnull)storage;
 		[Static]
 		[Export ("storage")]
