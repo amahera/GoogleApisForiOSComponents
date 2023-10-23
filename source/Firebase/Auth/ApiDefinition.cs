@@ -760,6 +760,10 @@ namespace Firebase.Auth
 		[Static]
 		[Export ("credentialWithProviderID:IDToken:rawNonce:")]
 		OAuthCredential GetCredentialWithRawNonce (string providerId, string IdToken, [NullAllowed] string rawNonce);
+		
+		[Static]
+		[Export ("appleCredentialWithIDToken:rawNonce:fullName:")]
+		OAuthCredential GetAppleCredential(string IdToken, [NullAllowed] string rawNonce, [NullAllowed] NSPersonNameComponents fullName);
 	}
 
 	// @interface FIRPhoneAuthCredential : FIRAuthCredential
