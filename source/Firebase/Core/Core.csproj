@@ -10,7 +10,7 @@
     <RootNamespace>Firebase.Core</RootNamespace>
     <AssemblyName>Firebase.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>10.7.0.1</FileVersion>
+    <FileVersion>10.16.0.2</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -26,7 +26,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2007321</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>10.7.0.1</PackageVersion>
+    <PackageVersion>10.16.0.2</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\AssemblyInfo.cs" />
@@ -91,6 +91,9 @@
     </_NativeReference>
     <_NativeReference Include="..\..\..\externals\Promises.xcframework">
       <_Id>$(_Promises)</_Id>
+    </_NativeReference>
+    <_NativeReference Include="..\..\..\externals\FirebaseSessions.xcframework">
+      <_Id>$(_FirebaseSessions)</_Id>
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
