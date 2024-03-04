@@ -66,7 +66,7 @@ var ARTIFACTS = new Dictionary<string, Artifact> {
 	// { "Google.Analytics",             GOOGLE_ANALYTICS_ARTIFACT },
 	// { "Google.Cast",                  GOOGLE_CAST_ARTIFACT },	
 	// { "Google.Maps",                  GOOGLE_MAPS_ARTIFACT },
-	// { "Google.MobileAds",             GOOGLE_MOBILE_ADS_ARTIFACT },
+	{ "Google.MobileAds",             GOOGLE_MOBILE_ADS_ARTIFACT },
 	// { "Google.UserMessagingPlatform", GOOGLE_UMP_ARTIFACT },
 	// { "Google.Places",                GOOGLE_PLACES_ARTIFACT },
 	// { "Google.SignIn",                GOOGLE_SIGN_IN_ARTIFACT },
