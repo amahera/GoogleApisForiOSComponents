@@ -22,7 +22,7 @@ Artifact FIREBASE_STORAGE_ARTIFACT                 = new Artifact ("Firebase.Sto
 Artifact GOOGLE_ANALYTICS_ARTIFACT    = new Artifact ("Google.Analytics",             "3.20.0.2", "11.0",  ComponentGroup.Google, csprojName: "Analytics");
 Artifact GOOGLE_CAST_ARTIFACT         = new Artifact ("Google.Cast",                  "4.7.0.1",  "12.0", ComponentGroup.Google, csprojName: "Cast");
 Artifact GOOGLE_MAPS_ARTIFACT         = new Artifact ("Google.Maps",                  "6.0.1.1",  "12.0", ComponentGroup.Google, csprojName: "Maps");
-Artifact GOOGLE_MOBILE_ADS_ARTIFACT   = new Artifact ("Google.MobileAds",             "8.13.0.3", "11.0", ComponentGroup.Google, csprojName: "MobileAds");
+Artifact GOOGLE_MOBILE_ADS_ARTIFACT   = new Artifact ("Google.MobileAds",             "9.12.0.2", "11.0", ComponentGroup.Google, csprojName: "MobileAds");
 Artifact GOOGLE_UMP_ARTIFACT          = new Artifact ("Google.UserMessagingPlatform", "1.1.0.1",  "11.0", ComponentGroup.Google, csprojName: "UserMessagingPlatform");
 Artifact GOOGLE_PLACES_ARTIFACT       = new Artifact ("Google.Places",                "6.0.0.1",  "12.0", ComponentGroup.Google, csprojName: "Places");
 Artifact GOOGLE_SIGN_IN_ARTIFACT      = new Artifact ("Google.SignIn",                "5.0.2.4",  "11.0", ComponentGroup.Google, csprojName: "SignIn");
@@ -222,7 +222,7 @@ void SetArtifactsPodSpecs ()
 		PodSpec.Create ("GoogleMaps", "6.0.1")
 	};
 	GOOGLE_MOBILE_ADS_ARTIFACT.PodSpecs = new [] {
-		PodSpec.Create ("Google-Mobile-Ads-SDK", "8.13.0")
+		PodSpec.Create ("Google-Mobile-Ads-SDK", "9.12.0")
 	};
 	GOOGLE_UMP_ARTIFACT.PodSpecs = new [] {
 		PodSpec.Create ("GoogleUserMessagingPlatform", "1.1.0")
