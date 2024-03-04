@@ -397,9 +397,6 @@ namespace Google.MobileAds {
 		[Export ("removeAdNetworkExtrasFor:")]
 		void RemoveAdNetworkExtrasFor (Class aClass);
 
-		[Export ("setLocationWithLatitude:longitude:accuracy:")]
-		void SetLocation (nfloat latitude, nfloat longitude, nfloat accuracyInMeters);
-
 		[NullAllowed]
 		[Export ("keywords", ArgumentSemantic.Copy)]
 		string [] Keywords { get; set; }
@@ -486,11 +483,6 @@ namespace Google.MobileAds {
 		// @property(nonatomic, readonly, nonnull) NSDictionary<NSString *, id> *dictionaryRepresentation;
 		[Export ("dictionaryRepresentation")]
 		NSDictionary<NSString, NSObject> DictionaryRepresentation { get; }
-
-		// @property(nonatomic, readonly, nonnull) NSDictionary<NSString *, id> *credentials;       
-		[Obsolete ("Use adUnitMapping instead")]
-		[Export ("credentials")]
-		NSDictionary<NSString, NSObject> Credentials { get; }
 	}
 
 	// @interface GADResponseInfo : NSObject
@@ -697,11 +689,11 @@ namespace Google.MobileAds {
 		[Export ("ad:didFailToPresentFullScreenContentWithError:")]
 		void DidFailToPresentFullScreenContent (FullScreenPresentingAd ad, NSError error);
 
-		// - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad;
+		// - (void)adWillPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad;
 		[EventArgs ("FullScreenPresentingAd")]
 		[EventName ("PresentedContent")]
-		[Export ("adDidPresentFullScreenContent:")]
-		void DidPresentFullScreenContent (FullScreenPresentingAd ad);
+		[Export ("adWillPresentFullScreenContent:")]
+		void WillPresentFullScreenContent (FullScreenPresentingAd ad);
 
 		// - (void)adWillDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad;
 		[EventArgs ("FullScreenPresentingAd")]
