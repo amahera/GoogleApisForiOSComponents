@@ -43,7 +43,7 @@ namespace Firebase.Installations
 		// +(FIRInstallations * _Nonnull)installationsWithApp:(FIRApp * _Nonnull)application __attribute__((swift_name("installations(app:)")));
 		[Static]
 		[Export ("installationsWithApp:")]
-		Installations From (Core.App application);
+		Installations From (Firebase.Core.App application);
 
 		// -(void)installationIDWithCompletion:(FIRInstallationsIDHandler _Nonnull)completion;
 		[Async]

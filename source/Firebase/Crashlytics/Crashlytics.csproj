@@ -10,12 +10,12 @@
     <RootNamespace>Firebase.Crashlytics</RootNamespace>
     <AssemblyName>Firebase.Crashlytics</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>10.16.0.1</FileVersion>
+    <FileVersion>10.16.0.2</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.Crashlytics</PackageId>
+    <PackageId>Xamarin.Firebase.iOS.Crashlytics.Temp</PackageId>
     <Title>Firebase APIs Crashlytics iOS Library</Title>
     <Summary>C# bindings for Firebase APIs Crashlytics iOS Library</Summary>
     <Description>C# bindings for Firebase APIs Crashlytics iOS Library</Description>
@@ -26,7 +26,7 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=873305</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>10.16.0.1</PackageVersion>
+    <PackageVersion>10.16.0.3</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\AssemblyInfo.cs" />
@@ -35,10 +35,10 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Crashlytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Crashlytics.targets" />
-    <None Include="Crashlytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Crashlytics.targets" />
-    <None Include="Crashlytics.props" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Crashlytics.props" />
-    <None Include="Crashlytics.props" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Crashlytics.props" />
+    <None Include="Crashlytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Crashlytics.Temp.targets" />
+    <None Include="Crashlytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Crashlytics.Temp.targets" />
+    <None Include="Crashlytics.props" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Crashlytics.Temp.props" />
+    <None Include="Crashlytics.props" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Crashlytics.Temp.props" />
     <None Include="readme.txt" Pack="True" PackagePath="readme.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseioscrashlytics_128x128.png" Pack="True" PackagePath="firebaseioscrashlytics_128x128.png" />
@@ -71,7 +71,7 @@
     <PackageReference Include="Xamarin.Build.Download" Version="0.11.0" PrivateAssets="None" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" PrivateAssets="None" />
-    <ProjectReference Include="..\Installations\Installations.csproj" PrivateAssets="None" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Installations\Installations.csproj" />
   </ItemGroup>
 </Project>

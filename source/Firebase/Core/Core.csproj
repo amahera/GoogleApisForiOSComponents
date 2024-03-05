@@ -15,7 +15,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.Core</PackageId>
+    <PackageId>Xamarin.Firebase.iOS.Core.Temp</PackageId>
     <Title>Firebase APIs Core iOS Library</Title>
     <Summary>C# bindings for Firebase APIs Core iOS Library</Summary>
     <Description>C# bindings for Firebase APIs Core iOS Library</Description>
@@ -35,8 +35,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>    
-    <None Include="Core.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Core.targets" />
-    <None Include="Core.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Core.targets" />
+    <None Include="Core.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Core.Temp.targets" />
+    <None Include="Core.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Core.Temp.targets" />
     <None Include="External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseioscore_128x128.png" Pack="True" PackagePath="firebaseioscore_128x128.png" />

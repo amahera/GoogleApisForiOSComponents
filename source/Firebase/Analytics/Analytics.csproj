@@ -10,13 +10,14 @@
     <RootNamespace>Firebase.Analytics</RootNamespace>
     <AssemblyName>Firebase.Analytics</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>10.16.0.1</FileVersion>
+    <FileVersion>10.16.0.2</FileVersion>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ProcessEnums>true</ProcessEnums>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.Analytics</PackageId>
+    <PackageId>Xamarin.Firebase.iOS.Analytics.Temp</PackageId>
     <Title>Firebase APIs Analytics iOS Library</Title>
     <Summary>C# bindings for Firebase APIs Analytics iOS Library</Summary>
     <Description>C# bindings for Firebase APIs Analytics iOS Library</Description>
@@ -27,7 +28,10 @@
     <PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=865559</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>10.16.0.1</PackageVersion>
+    <PackageVersion>10.16.0.3</PackageVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\AssemblyInfo.cs" />
@@ -36,8 +40,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Analytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Analytics.targets" />
-    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Analytics.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Analytics.Temp.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Analytics.Temp.targets" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseiosanalytics_128x128.png" Pack="True" PackagePath="firebaseiosanalytics_128x128.png" />
   </ItemGroup>
@@ -53,7 +57,7 @@
     <PackageReference Include="Xamarin.Build.Download" Version="0.11.0" PrivateAssets="None" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" PrivateAssets="None" />
-    <ProjectReference Include="..\Installations\Installations.csproj" PrivateAssets="None" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Installations\Installations.csproj" />
   </ItemGroup>
 </Project>
