@@ -1,12 +1,11 @@
-﻿<Project Sdk="Xamarin.Legacy.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
-    <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+    <TargetFrameworks>net8.0-ios</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>true</NoBindingEmbedding>
-    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <RootNamespace>Firebase.Core</RootNamespace>
     <AssemblyName>Firebase.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -15,7 +14,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.Core.Temp</PackageId>
+    <PackageId>Xamarin.Firebase.iOS.Core.Temp.Maui</PackageId>
     <Title>Firebase APIs Core iOS Library</Title>
     <Summary>C# bindings for Firebase APIs Core iOS Library</Summary>
     <Description>C# bindings for Firebase APIs Core iOS Library</Description>
@@ -35,8 +34,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>    
-    <None Include="Core.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Core.Temp.targets" />
-    <None Include="Core.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Core.Temp.targets" />
+    <None Include="Core.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Core.Temp.Maui.targets" />
+    <None Include="Core.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Core.Maui.Temp.targets" />
     <None Include="External-Dependency-Info.txt" Pack="True" PackagePath="THIRD-PARTY-NOTICES.txt" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseioscore_128x128.png" Pack="True" PackagePath="firebaseioscore_128x128.png" />
@@ -97,10 +96,6 @@
     </_NativeReference>
   </ItemGroup>
   <!-- End of workaround -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
-    <Compile Remove="ApiDefinition.cs" />
-    <Compile Remove="Enums.cs" />
-  </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="Enums.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
   </ItemGroup>

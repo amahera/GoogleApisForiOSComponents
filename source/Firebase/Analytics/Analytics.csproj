@@ -1,12 +1,11 @@
-﻿<Project Sdk="Xamarin.Legacy.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>xamarin.ios10;net6.0-ios</TargetFrameworks>
-    <NoNFloatUsing Condition="'$(TargetFramework)' == 'xamarin.ios10'">true</NoNFloatUsing>
+    <TargetFrameworks>net8.0-ios</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>false</NoBindingEmbedding>
-    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
     <RootNamespace>Firebase.Analytics</RootNamespace>
     <AssemblyName>Firebase.Analytics</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -17,7 +16,7 @@
     <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Xamarin.Firebase.iOS.Analytics.Temp</PackageId>
+    <PackageId>Xamarin.Firebase.iOS.Analytics.Temp.Maui</PackageId>
     <Title>Firebase APIs Analytics iOS Library</Title>
     <Summary>C# bindings for Firebase APIs Analytics iOS Library</Summary>
     <Description>C# bindings for Firebase APIs Analytics iOS Library</Description>
@@ -40,14 +39,10 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Analytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Analytics.Temp.targets" />
-    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Analytics.Temp.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="build/Xamarin.Firebase.iOS.Analytics.Temp.Maui.targets" />
+    <None Include="Analytics.targets" Pack="True" PackagePath="buildTransitive/Xamarin.Firebase.iOS.Analytics.Temp.Maui.targets" />
     <None Include="License.md" Pack="True" PackagePath="License.md" />
     <None Include="../../../icons/firebaseiosanalytics_128x128.png" Pack="True" PackagePath="firebaseiosanalytics_128x128.png" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'xamarin.ios10'">
-    <Compile Remove="ApiDefinition.cs" />
-    <Compile Remove="Enums.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true'" />
